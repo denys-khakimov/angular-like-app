@@ -1,0 +1,20 @@
+#content{
+  width: 640px;
+  overflow: hidden;
+margin: 0 auto;
+}
+
+*{
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  margin: 20px;
+}
+
+img#liked{
+  float: right;
+}

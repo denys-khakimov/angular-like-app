@@ -1,0 +1,34 @@
+<small>
+{{ outputmessage }}
+</small>
+
+<p *ngFor="let animal of animals| slice:0:1">
+
+
+    <span *ngIf="animal.url;then show else noimages"></span>
+    <ng-template #show>
+        <img class="preview" src="{{ animal.url }}">
+        <br>
+        <p class="descr">{{animal.descr}}</p>
+        <span class="sp-button">
+            <a href="#" class="sp-button">
+             <button class="button-success" (click)="like(animal, animal.id)">Like</button></a>
+             <a href="#" class="sp-button">
+             <button class="button-error" (click)="dislike($event, animal.id)">Don't like</button></a></span>
+
+
+    </ng-template>
+    <ng-template #noimages><p>No new images.</p></ng-template>
+
+
+
+</p>
+
+
+<p class="descr fl-right">Your likes:</p>
+<p *ngFor="let ani of animalLikes">
+    <img class="small_preview" src="{{ ani.url }}">
+
+    </p>
+
+
